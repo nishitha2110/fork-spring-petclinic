@@ -26,7 +26,6 @@ pipeline {
     post {
         success {
             echo "Build succeeded for ${APP_NAME}"
-            echo "Build succeeded for ${APP_NAME}"
             mail(
                 bcc: '',
                 cc: 'akshathabm20@gmail.com',
