@@ -11,10 +11,7 @@ pipeline {
     options{
         timeout(time:10, unit:'MINUTES')
     }
-    triggers{
-        githubPush()
-    }
-    tools{
+        tools{
         jdk "java-home-25"
         maven "maven-home"
     }
