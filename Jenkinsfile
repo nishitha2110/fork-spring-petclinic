@@ -12,13 +12,13 @@ pipeline {
         timeout(time:10, unit:'MINUTES')
     }
         tools{
-        jdk "java-home-25"
+        jdk "java-home25"
         maven "maven-home"
     }
     stages {
         stage('Git-Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/Akshathabm786/fork-spring-petclinic.git'
+                git branch: 'main', url: 'https://github.com/nishitha2110/fork-spring-petclinic.git'
             }
         }
         stage('Build-package') {
@@ -31,7 +31,7 @@ pipeline {
     post {
     success {
         mail (
-            to: 'akshatha.1si20et003@gmail.com',
+            to: 'nishithajadhav2113@gmail.com',
             cc: '',
             subject: "SUCCESS: ${APP_NAME}",
             body: """
@@ -50,7 +50,7 @@ pipeline {
     }
 failure {
     mail (
-        to: 'akshatha.1si20et003@gmail.com',
+        to: 'nishithajadhav2113@gmail.com',
             cc: '',
             subject: "FAILED: ${APP_NAME}",
             body: """
