@@ -12,8 +12,8 @@ pipeline {
         timeout(time:10, unit:'MINUTES')
     }
         tools{
-        jdk "java-home25"
-        maven "maven-home"
+        jdk "java-home"
+        maven "mvn-home"
     }
     stages {
         stage('Git-Clone') {
