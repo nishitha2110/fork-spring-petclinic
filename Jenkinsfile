@@ -13,7 +13,7 @@ pipeline {
     }
         tools{
         jdk "java-home"
-        maven "mvn-home"
+        maven "maven-home"
     }
     stages {
         stage('Git-Clone') {
@@ -31,7 +31,7 @@ pipeline {
     post {
     success {
         mail (
-            to: 'nishithajadhav2113@gmail.com',
+            to: 'nishithapatil2113@gmail.com',
             cc: '',
             subject: "SUCCESS: ${APP_NAME}",
             body: """
@@ -50,7 +50,7 @@ pipeline {
     }
 failure {
     mail (
-        to: 'nishithajadhav2113@gmail.com',
+        to: 'nishithapatil2113@gmail.com',
             cc: '',
             subject: "FAILED: ${APP_NAME}",
             body: """
